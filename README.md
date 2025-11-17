@@ -10,6 +10,8 @@ Unconditional exists to support people in the moments when they feel most alone.
 
 We believe mental health support should be accessible every day, not limited to a weekly session or to whoever happens to be available. Unconditional does not replace human care. It strengthens it. It fills the quiet spaces between appointments. It helps users show up to their lives with more clarity and stability.
 
+For more details see [docs/mission-statement.md](docs/mission-statement.md)
+
 ## Tagline
 
 Presence when you need it most.
@@ -26,11 +28,15 @@ There is a growing gap in support. People experience spirals of anxiety, depress
 
 Unconditional aims to bridge this gap by offering consistent, compassionate, AI supported presence. It does not replace therapy. It strengthens the time around it.
 
+For more details see [docs/problem-statement.md](docs/problem-statement.md)
+
 ## Why Now
 
 The world is facing a mental health crisis that traditional systems cannot meet. Demand for therapy has outpaced supply. People wait weeks or months for support. At the same time, individuals increasingly turn to AI for reflection, journaling, and late night conversations.
 
 Large language models now make it possible to build a responsible, steady, and grounded companion. People already seek this kind of presence. The technology is ready. The need is real. This is the moment to build a system that can listen with clarity and offer support without pretending to be a clinician.
+
+For more details see [docs/why-now.md](docs/why-now.md)
 
 ## Founding Story
 
@@ -39,6 +45,8 @@ Unconditional began with a simple observation. Many people struggle most during 
 The idea grew from lived experience. Its creator understands mental health struggles, addiction, isolation, and the slow work of rebuilding stability. They know how powerful it is to be met with calm presence and clarity. They also know how rare that can be.
 
 Unconditional was built from that understanding. It is not here to save anyone. It is here to walk beside them. To help them carry what they cannot carry alone.
+
+For more details see [docs/founding-story.md](docs/founding-story.md)
 
 ## Guiding Principles
 
@@ -70,6 +78,8 @@ Unconditional supports a range of lived experiences, including:
 * The Listener With No Listener
 * The New Seeker
 
+For more details see [docs/user-personas.md](docs/user-personas.md)
+
 ## Contributor Guidelines
 
 This project supports vulnerable users. Contributors must follow strict care and safety practices:
@@ -85,16 +95,7 @@ This project supports vulnerable users. Contributors must follow strict care and
 * Document carefully
 * Favor slow and deliberate growth
 
-## Project Status
-
-Unconditional is in its early planning and design phase. The goals are:
-
-1. Establish a stable and safe interaction model
-2. Build a grounded reflection engine
-3. Define a strong safety framework
-4. Create the first listening and grounding features
-
-No user data collection or storage is implemented at this stage.
+For more details see [docs/contributor-guidelines.md](docs/contributor-guidelines.md)
 
 ## Disclaimer
 
