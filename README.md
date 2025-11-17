@@ -50,6 +50,18 @@ Unconditional was built from that understanding. It is not here to save anyone. 
 
 For more details see [docs/founding-story.md](docs/founding-story.md)
 
+## Founder Manifesto
+
+Unconditional was built by someone who has lived through the gaps this system aims to bridge. Born from personal experience with addiction, mental health struggles, and the long quiet hours when no support was available, this project exists to help people stay grounded when they feel most alone.
+
+The founder's intent is not disruption or scale for its own sake. It is to build technology that treats vulnerability as sacred, refuses to exploit emotion, and respects human dignity over engagement metrics. This is a commitment to restraint, honesty, and boundaries—to creating presence without pretense.
+
+Unconditional is not about replacing human care. It is about sitting with people during the moments when human care is not available. It is about helping them hear their own thoughts with clarity, interrupt harmful patterns, and stay connected to their humanity.
+
+This project is built with the same care that recovery requires: slow, intentional, and structured. No shortcuts. No false promises. Just steady presence when it matters most.
+
+For more details see [docs/founder-manifesto.md](docs/founder-manifesto.md)
+
 ## Guiding Principles
 
 * Always support, never pretend
