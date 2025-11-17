@@ -4,6 +4,8 @@
 
 Unconditional is an AI supported companion designed to help people stay grounded during the moments when they feel most alone. It listens with patience, reflects with clarity, and offers gentle structure that supports mental and emotional well being. Unconditional strengthens the time between therapy sessions and human conversations. It is not a replacement for a therapist.
 
+![logo](logo.png)
+
 ## Mission Statement
 
 Unconditional exists to support people in the moments when they feel most alone. Our mission is to provide steady, compassionate, AI supported presence that helps individuals reflect, self regulate, and stay connected to their own humanity. We do this by listening deeply, offering gentle structure, and helping users recognize harmful thought patterns without judgment.
