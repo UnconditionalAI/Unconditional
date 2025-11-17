@@ -99,6 +99,30 @@ This project supports vulnerable users. Contributors must follow strict care and
 
 For more details see [docs/contributor-guidelines.md](docs/contributor-guidelines.md)
 
+## Ideal Founding Team
+
+Unconditional requires three co-founders with equal authority to ensure ethical, clinical, and emotional integrity:
+
+### The Visionary Engineer
+The creator and technical architect who builds the system, maintains philosophical consistency, and drives product vision. Staff-level engineer with expertise in Python, AI systems, and safety design. Must have lived experience with mental health challenges and deep commitment to building with restraint and responsibility.
+
+For more details see [docs/ideal-founding-engineer.md](docs/ideal-founding-engineer.md)
+
+### The Psychiatrist (Clinical Safety Authority)
+Board-certified psychiatrist (MD/DO) who defines clinical boundaries, prevents diagnostic drift, and ensures medical legitimacy. Mid-career (10-20+ years), ideally with specialization in addiction medicine and mood disorders. Serves as the ethical stabilizer and risk mitigation authority.
+
+For more details see [docs/ideal-founding-psychiatrist.md](docs/ideal-founding-psychiatrist.md)
+
+### The Therapist (Emotional & Relational Anchor)
+LMFT or LCSW who shapes the emotional tone, voice, and relational dynamics of the system. Ideally an African-American woman in her late 50s-60s with 20-30+ years of experience in community mental health, group facilitation, and trauma-informed care. Brings cultural wisdom, emotional grounding, and protects against dependency and pseudo-intimacy.
+
+For more details see [docs/ideal-founding-therapist.md](docs/ideal-founding-therapist.md)
+
+### Team Dynamic
+The engineer pushes forward. The psychiatrist contains risk. The therapist stabilizes the emotional and cultural dimensions. This triangulation ensures Unconditional grows with compassion, responsibility, and integrity.
+
+For more details see [docs/ideal-founding-team.md](docs/ideal-founding-team.md)
+
 ## Disclaimer
 
 Unconditional is not a therapist. It does not diagnose, treat, or prevent mental illness. It does not replace therapy, crisis lines, or professional care. If a user expresses intent to harm themselves or others, the system will direct them to appropriate human resources immediately.
