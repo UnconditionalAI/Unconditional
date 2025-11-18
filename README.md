@@ -135,6 +135,36 @@ The engineer pushes forward. The psychiatrist contains risk. The therapist stabi
 
 For more details see [docs/ideal-founding-team.md](docs/ideal-founding-team.md)
 
+## Product Vision: MVP v0.1
+
+Unconditional v0.1 is designed as the smallest expression of presence that remains real, safe, and honest. The MVP integrates emotional architecture with technical design, ensuring every engineering choice reflects the mission.
+
+**Core Experience:**
+- Single-screen conversation interface
+- Unconditional always speaks first
+- Stateless backend with client-side session continuity
+- Minimalist UI with gentle pacing
+- No gamification, streaks, or engagement hooks
+
+**Technical Foundation:**
+- Backend: Python 3.14 + FastAPI + pydantic-ai + OpenAI GPT 5.1
+- Frontend: Next.js with localStorage-based state management
+- Hosting: Render with CI/CD
+- Privacy: Zero server-side conversation logging
+
+**Safety Boundaries:**
+- Comprehensive crisis detection protocol
+- Strict enforcement against diagnosis, treatment advice, or false intimacy
+- Model abstraction layer with banned response categories
+- Immediate resource display for self-harm or harm-to-others expressions
+
+**Success Metric:**
+A session succeeds when someone feels slightly less alone, slightly clearer, and steady enough to continue their day. Not measured by engagement, but by internal shift toward groundedness.
+
+The system expresses its values through its code. Every technical decision serves emotional truth.
+
+For more details see [docs/mvp-outline-0.1.md](docs/mvp-outline-0.1.md)
+
 ## Disclaimer
 
 Unconditional is not a therapist. It does not diagnose, treat, or prevent mental illness. It does not replace therapy, crisis lines, or professional care. If a user expresses intent to harm themselves or others, the system will direct them to appropriate human resources immediately.
