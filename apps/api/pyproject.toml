@@ -3,6 +3,7 @@ name = "api"
 version = "0.1.0"
 requires-python = ">=3.14"
 dependencies = [
+    "fastapi>=0.121.2",
     "pydantic>=2.12.4",
     "pydantic-ai>=1.19.0",
 ]
