@@ -37,6 +37,7 @@ Unconditional/
 │       └── tests/             # Unit and integration tests
 │
 ├── docs/                      # Project documentation
+│   ├── AGENTS.md              # Documentation orientation guide
 │   ├── governance/            # Code of conduct, contributor guides
 │   ├── product/               # Mission, vision, user personas
 │   └── specs/                 # Technical specifications (e.g., MVP v0.1)
@@ -66,6 +67,7 @@ Start here to understand the "why" behind every technical decision:
 
 ### Application-Specific Guidelines
 - **`apps/api/AGENTS.md`** - Python code style, import conventions, type hints, safety patterns
+- **`docs/AGENTS.md`** - Documentation structure, mission alignment, how to use product/governance/specs docs
 
 ---
 
@@ -180,6 +182,7 @@ Write code accordingly.
 | I need to... | Look here |
 |--------------|-----------|
 | Understand the mission | `README.md`, `docs/product/mission-statement.md` |
+| Navigate documentation | `docs/AGENTS.md` |
 | Learn Python code style | `apps/api/AGENTS.md` |
 | Review MVP spec | `docs/specs/mvp-outline-0.1.md` |
 | Understand user needs | `docs/product/user-personas.md` |
