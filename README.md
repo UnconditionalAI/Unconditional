@@ -12,7 +12,7 @@ Unconditional exists to support people in the moments when they feel most alone.
 
 We believe mental health support should be accessible every day, not limited to a weekly session or to whoever happens to be available. Unconditional does not replace human care. It strengthens it. It fills the quiet spaces between appointments. It helps users show up to their lives with more clarity and stability.
 
-For more details see [docs/mission-statement.md](docs/mission-statement.md)
+For more details see [docs/product/mission-statement.md](docs/product/mission-statement.md)
 
 ## Tagline
 
@@ -30,7 +30,7 @@ There is a growing gap in support. People experience spirals of anxiety, depress
 
 Unconditional aims to bridge this gap by offering consistent, compassionate, AI supported presence. It does not replace therapy. It strengthens the time around it.
 
-For more details see [docs/problem-statement.md](docs/problem-statement.md)
+For more details see [docs/product/problem-statement.md](docs/product/problem-statement.md)
 
 ## Why Now
 
@@ -38,7 +38,7 @@ The world is facing a mental health crisis that traditional systems cannot meet.
 
 Large language models now make it possible to build a responsible, steady, and grounded companion. People already seek this kind of presence. The technology is ready. The need is real. This is the moment to build a system that can listen with clarity and offer support without pretending to be a clinician.
 
-For more details see [docs/why-now.md](docs/why-now.md)
+For more details see [docs/product/why-now.md](docs/product/why-now.md)
 
 ## Founding Story
 
@@ -48,7 +48,7 @@ The idea grew from lived experience. Its creator understands mental health strug
 
 Unconditional was built from that understanding. It is not here to save anyone. It is here to walk beside them. To help them carry what they cannot carry alone.
 
-For more details see [docs/founding-story.md](docs/founding-story.md)
+For more details see [docs/product/founding-story.md](docs/product/founding-story.md)
 
 ## Founder Manifesto
 
@@ -60,7 +60,7 @@ Unconditional is not about replacing human care. It is about sitting with people
 
 This project is built with the same care that recovery requires: slow, intentional, and structured. No shortcuts. No false promises. Just steady presence when it matters most.
 
-For more details see [docs/founder-manifesto.md](docs/founder-manifesto.md)
+For more details see [docs/product/founder-manifesto.md](docs/product/founder-manifesto.md)
 
 ## Guiding Principles
 
@@ -92,7 +92,7 @@ Unconditional supports a range of lived experiences, including:
 * The Listener With No Listener
 * The New Seeker
 
-For more details see [docs/user-personas.md](docs/user-personas.md)
+For more details see [docs/product/user-personas.md](docs/product/user-personas.md)
 
 ## Contributor Guidelines
 
@@ -109,7 +109,7 @@ This project supports vulnerable users. Contributors must follow strict care and
 * Document carefully
 * Favor slow and deliberate growth
 
-For more details see [docs/contributor-guidelines.md](docs/contributor-guidelines.md)
+For more details see [docs/governance/contributor-guidelines.md](docs/governance/contributor-guidelines.md)
 
 ## Ideal Founding Team
 
@@ -118,22 +118,22 @@ Unconditional requires three co-founders with equal authority to ensure ethical,
 ### The Visionary Engineer
 The creator and technical architect who builds the system, maintains philosophical consistency, and drives product vision. Staff-level engineer with expertise in Python, AI systems, and safety design. Must have lived experience with mental health challenges and deep commitment to building with restraint and responsibility.
 
-For more details see [docs/ideal-founding-engineer.md](docs/ideal-founding-engineer.md)
+For more details see [docs/governance/ideal-founding-engineer.md](docs/governance/ideal-founding-engineer.md)
 
 ### The Psychiatrist (Clinical Safety Authority)
 Board-certified psychiatrist (MD/DO) who defines clinical boundaries, prevents diagnostic drift, and ensures medical legitimacy. Mid-career (10-20+ years), ideally with specialization in addiction medicine and mood disorders. Serves as the ethical stabilizer and risk mitigation authority.
 
-For more details see [docs/ideal-founding-psychiatrist.md](docs/ideal-founding-psychiatrist.md)
+For more details see [docs/governance/ideal-founding-psychiatrist.md](docs/governance/ideal-founding-psychiatrist.md)
 
 ### The Therapist (Emotional & Relational Anchor)
 LMFT or LCSW who shapes the emotional tone, voice, and relational dynamics of the system. Ideally an African-American woman in her late 50s-60s with 20-30+ years of experience in community mental health, group facilitation, and trauma-informed care. Brings cultural wisdom, emotional grounding, and protects against dependency and pseudo-intimacy.
 
-For more details see [docs/ideal-founding-therapist.md](docs/ideal-founding-therapist.md)
+For more details see [docs/governance/ideal-founding-therapist.md](docs/governance/ideal-founding-therapist.md)
 
 ### Team Dynamic
 The engineer pushes forward. The psychiatrist contains risk. The therapist stabilizes the emotional and cultural dimensions. This triangulation ensures Unconditional grows with compassion, responsibility, and integrity.
 
-For more details see [docs/ideal-founding-team.md](docs/ideal-founding-team.md)
+For more details see [docs/governance/ideal-founding-team.md](docs/governance/ideal-founding-team.md)
 
 ## Product Vision: MVP v0.1
 
@@ -163,7 +163,7 @@ A session succeeds when someone feels slightly less alone, slightly clearer, and
 
 The system expresses its values through its code. Every technical decision serves emotional truth.
 
-For more details see [docs/mvp-outline-0.1.md](docs/mvp-outline-0.1.md)
+For more details see [docs/specs/mvp-outline-0.1.md](docs/specs/mvp-outline-0.1.md)
 
 ## Disclaimer
 

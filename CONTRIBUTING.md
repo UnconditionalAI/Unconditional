@@ -59,7 +59,7 @@ Treat all contributors with respect. Assume good intent. This work requires calm
 
 ## Essential Reading
 
-[Code of Conduct](docs/code-of-conduct.md)
-[Contributor Guidelines](docs/contributor-guidelines.md)
+[Code of Conduct](docs/governance/code-of-conduct.md)
+[Contributor Guidelines](docs/governance/contributor-guidelines.md)
 
 Thank you for helping build Unconditional with integrity and care.
