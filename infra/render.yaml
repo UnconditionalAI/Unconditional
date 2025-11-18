@@ -1,0 +1,36 @@
+# Render.com deployment configuration for Unconditional
+#
+# This defines both the Python API backend and the Next.js frontend
+# as separate services within one unified project.
+
+services:
+  # Python FastAPI backend
+  - type: web
+    name: unconditional-api
+    runtime: python
+    plan: free
+    buildCommand: "cd apps/api && pip install -e ."
+    startCommand: "cd apps/api && uvicorn src.main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.14"
+      - key: OPENAI_API_KEY
+        sync: false  # Set manually in Render dashboard
+      - key: LLM_PROVIDER
+        value: "openai"
+      - key: ENVIRONMENT
+        value: "production"
+    healthCheckPath: /api/v1/health
+
+  # Next.js frontend
+  - type: web
+    name: unconditional-web
+    runtime: node
+    plan: free
+    buildCommand: "cd apps/web && npm install && npm run build"
+    startCommand: "cd apps/web && npm start"
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: NEXT_PUBLIC_API_URL
+        value: "https://unconditional-api.onrender.com/api/v1"

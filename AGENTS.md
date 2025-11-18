@@ -19,34 +19,82 @@ This is not a therapy replacement. It is not a chatbot optimized for engagement.
 
 ---
 
-## Repository Structure
+## Repository Architecture
+
+**This is a unified mono-repo.** All components—philosophy, backend, frontend, infrastructure—live in one place for maximum coherence and velocity.
 
 ```
 Unconditional/
-├── apps/                      # Application codebases
-│   └── api/                   # Python FastAPI backend
-│       ├── AGENTS.md          # Python-specific code guidelines
-│       ├── pyproject.toml     # Dependencies and tooling config
-│       ├── src/               # Application source code
-│       │   ├── api/           # FastAPI routes and endpoints
-│       │   ├── core/          # Configuration and dependencies
-│       │   ├── models/        # Pydantic data models
-│       │   ├── prompts/       # LLM system and opening prompts
-│       │   ├── safety/        # Crisis detection and guardrails
-│       │   └── services/      # LLM service abstractions
-│       └── tests/             # Unit and integration tests
+├── docs/                      # Philosophy, product, governance
+│   ├── philosophy/            # Mission, manifesto, founding story
+│   ├── product/               # User personas, MVP spec
+│   ├── governance/            # Code of conduct, contributor guidelines
+│   ├── architecture/          # Technical architecture (future)
+│   └── AGENTS.md              # Documentation orientation guide
 │
-├── docs/                      # Project documentation
-│   ├── AGENTS.md              # Documentation orientation guide
-│   ├── governance/            # Code of conduct, contributor guides
-│   ├── product/               # Mission, vision, user personas
-│   └── specs/                 # Technical specifications (e.g., MVP v0.1)
+├── apps/
+│   ├── api/                   # Python 3.14 FastAPI backend
+│   │   ├── AGENTS.md          # Python-specific code guidelines
+│   │   ├── pyproject.toml     # Dependencies and tooling config
+│   │   ├── src/               # Application source code
+│   │   │   ├── api/v1/        # HTTP endpoints
+│   │   │   ├── core/          # Configuration and dependencies
+│   │   │   ├── models/        # Pydantic data models
+│   │   │   ├── prompts/       # LLM system and opening prompts
+│   │   │   ├── safety/        # Crisis detection and guardrails
+│   │   │   └── services/llm/  # LLM service abstractions
+│   │   └── tests/             # Unit and integration tests
+│   │
+│   └── web/                   # Next.js frontend
+│       ├── app/               # Next.js app router
+│       ├── components/        # React components
+│       └── lib/               # API client, storage, utilities
 │
+├── infra/                     # Deployment configuration
+│   ├── render.yaml            # Render.com deployment spec
+│   └── README.md              # Environment variable documentation
+│
+├── ARCHITECTURE.md            # System architecture documentation
 ├── AGENTS.md                  # This file - repository orientation
 ├── CONTRIBUTING.md            # Contributor guidelines
 ├── LICENSE                    # Project license
 └── README.md                  # Project overview
 ```
+
+**Key principle:** "docs explain the soul; apps execute the soul."
+
+Every part of this repository serves one coherent mission. The philosophy documents aren't separate from the code—they define why the code exists and how it should behave.
+
+---
+
+## System Architecture Overview
+
+Unconditional is a **stateless, client-centric system**:
+
+1. **Frontend (apps/web/)** - Next.js conversation interface
+   - User interaction happens here
+   - All conversation state stored in browser localStorage
+   - No user accounts, no server-side persistence
+   - Minimal, calm UI design
+
+2. **Backend (apps/api/)** - Python FastAPI service
+   - Completely stateless
+   - Processes each message independently
+   - Safety-first pipeline: input → crisis detection → LLM → guardrails → output
+   - Abstracts LLM providers for future flexibility
+
+3. **Safety Layer** - Distributed across backend
+   - `safety/crisis_detection.py` - Conservative pattern matching
+   - `safety/guardrails.py` - Post-generation filtering
+   - `safety/banned_patterns.py` - Input validation
+   - **100% test coverage required**
+
+4. **Infrastructure (infra/)** - Render.com deployment
+   - Backend and frontend as separate services
+   - Environment-based configuration
+   - Zero conversation logging
+
+See [`ARCHITECTURE.md`](ARCHITECTURE.md) for complete technical details.
 
 ---
 
@@ -55,19 +103,20 @@ Unconditional/
 ### Mission and Philosophy
 Start here to understand the "why" behind every technical decision:
 
-- **`README.md`** - Project overview, mission, guiding principles
-- **`docs/product/mission-statement.md`** - Core mission and values
-- **`docs/product/founder-manifesto.md`** - Ethical foundation and intent
-- **`docs/product/problem-statement.md`** - The gap Unconditional fills
+- **`README.md`** - Full project overview with getting started guide
+- **`ARCHITECTURE.md`** - Complete system architecture and design decisions
+- **`docs/philosophy/mission-statement.md`** - Core mission and values
+- **`docs/philosophy/founder-manifesto.md`** - Ethical foundation and intent
+- **`docs/philosophy/problem-statement.md`** - The gap Unconditional fills
 - **`docs/product/user-personas.md`** - Who this serves and why
 
 ### Technical Specifications
-- **`docs/specs/mvp-outline-0.1.md`** - Complete MVP spec integrating product, safety, and technical architecture
+- **`docs/product/mvp-outline-0.1.md`** - Complete MVP spec integrating product, safety, and technical architecture
 - **`CONTRIBUTING.md`** - Contributor expectations and practices
 
 ### Application-Specific Guidelines
 - **`apps/api/AGENTS.md`** - Python code style, import conventions, type hints, safety patterns
-- **`docs/AGENTS.md`** - Documentation structure, mission alignment, how to use product/governance/specs docs
+- **`docs/AGENTS.md`** - Documentation structure, mission alignment, how to use product/governance docs
 
 ---
 
@@ -181,15 +230,18 @@ Write code accordingly.
 
 | I need to... | Look here |
 |--------------|-----------|
-| Understand the mission | `README.md`, `docs/product/mission-statement.md` |
+| Understand the mission | `README.md`, `docs/philosophy/mission-statement.md` |
+| See system architecture | `ARCHITECTURE.md` |
 | Navigate documentation | `docs/AGENTS.md` |
 | Learn Python code style | `apps/api/AGENTS.md` |
-| Review MVP spec | `docs/specs/mvp-outline-0.1.md` |
+| Review MVP spec | `docs/product/mvp-outline-0.1.md` |
 | Understand user needs | `docs/product/user-personas.md` |
 | Contribute to the project | `CONTRIBUTING.md` |
 | Work on crisis detection | `apps/api/src/safety/crisis_detection.py` + tests |
 | Modify LLM prompts | `apps/api/src/prompts/` (requires safety review) |
 | Add API endpoints | `apps/api/src/api/v1/endpoints/` + follow existing patterns |
+| Work on frontend UI | `apps/web/components/` + `apps/web/app/` |
+| Configure deployment | `infra/render.yaml` + `infra/README.md` |
 
 ---
 

@@ -2,9 +2,54 @@
 
 **Presence when you need it most.**
 
-Unconditional is an AI supported companion designed to help people stay grounded during the moments when they feel most alone. It listens with patience, reflects with clarity, and offers gentle structure that supports mental and emotional well being. Unconditional strengthens the time between therapy sessions and human conversations. It is not a replacement for a therapist.
+Unconditional is an AI-supported companion designed to help people stay grounded during the moments when they feel most alone. It listens with patience, reflects with clarity, and offers gentle structure that supports mental and emotional well-being. Unconditional strengthens the time between therapy sessions and human conversations. It is not a replacement for a therapist.
+
+This is a unified mono-repo containing the full system: philosophy, backend API, frontend web interface, and deployment infrastructure.
 
 ![logo](logo.png)
+
+---
+
+## Repository Structure
+
+```
+Unconditional/
+├── docs/                      # Philosophy, product, and governance
+│   ├── philosophy/            # Mission, manifesto, founding story
+│   ├── product/               # User personas, MVP spec
+│   ├── governance/            # Code of conduct, contributor guidelines
+│   └── architecture/          # Technical architecture (future)
+│
+├── apps/
+│   ├── api/                   # Python 3.14 FastAPI backend
+│   │   ├── src/               # Application source code
+│   │   │   ├── api/v1/        # HTTP endpoints
+│   │   │   ├── core/          # Configuration and dependencies
+│   │   │   ├── models/        # Pydantic data models
+│   │   │   ├── prompts/       # LLM system and opening prompts
+│   │   │   ├── safety/        # Crisis detection and guardrails
+│   │   │   └── services/llm/  # LLM service abstractions
+│   │   └── tests/             # Unit and integration tests
+│   │
+│   └── web/                   # Next.js frontend
+│       ├── app/               # Next.js app router
+│       ├── components/        # React components
+│       └── lib/               # API client, storage, utilities
+│
+├── infra/                     # Deployment configuration
+│   └── render.yaml            # Render.com deployment spec
+│
+├── ARCHITECTURE.md            # System architecture documentation
+├── AGENTS.md                  # LLM agent orientation guide
+└── CONTRIBUTING.md            # Contributor guidelines
+```
+
+**Philosophy → Code Mapping:**
+Every technical decision serves user dignity and safety. The codebase expresses the mission through its structure, safety systems, and design constraints.
+
+See [`ARCHITECTURE.md`](ARCHITECTURE.md) for the complete system architecture.
+
+---
 
 ## Mission Statement
 
@@ -146,24 +191,81 @@ Unconditional v0.1 is designed as the smallest expression of presence that remai
 - Minimalist UI with gentle pacing
 - No gamification, streaks, or engagement hooks
 
-**Technical Foundation:**
-- Backend: Python 3.14 + FastAPI + pydantic-ai + OpenAI GPT 5.1
-- Frontend: Next.js with localStorage-based state management
-- Hosting: Render with CI/CD
-- Privacy: Zero server-side conversation logging
+**Technical Stack:**
+- **Backend:** Python 3.14 + FastAPI + OpenAI
+- **Frontend:** Next.js + TypeScript + Tailwind CSS
+- **Infrastructure:** Render.com with CI/CD
+- **Storage:** Client-side only (localStorage)
+- **Privacy:** Zero server-side conversation logging
 
-**Safety Boundaries:**
-- Comprehensive crisis detection protocol
-- Strict enforcement against diagnosis, treatment advice, or false intimacy
-- Model abstraction layer with banned response categories
-- Immediate resource display for self-harm or harm-to-others expressions
+**Safety Architecture:**
+- Conservative crisis detection (false positives acceptable)
+- Input validation and banned pattern filtering
+- Post-generation guardrails for LLM outputs
+- Immediate resource display for crisis situations
+- Session locking when crisis detected
 
 **Success Metric:**
 A session succeeds when someone feels slightly less alone, slightly clearer, and steady enough to continue their day. Not measured by engagement, but by internal shift toward groundedness.
 
 The system expresses its values through its code. Every technical decision serves emotional truth.
 
-For more details see [docs/specs/mvp-outline-0.1.md](docs/specs/mvp-outline-0.1.md)
+For more details see [docs/product/mvp-outline-0.1.md](docs/product/mvp-outline-0.1.md)
+
+---
+
+## Getting Started
+
+### Prerequisites
+- Python 3.14+
+- Node.js 20+
+- npm or yarn
+- OpenAI API key
+
+### Backend Setup
+
+```bash
+cd apps/api
+
+# Create virtual environment
+python3.14 -m venv .venv
+source .venv/bin/activate  # or `.venv\Scripts\activate` on Windows
+
+# Install dependencies
+pip install -e ".[dev]"
+
+# Set environment variables
+cp .env.example .env
+# Edit .env and add your OPENAI_API_KEY
+
+# Run tests
+pytest tests/ -v --cov
+
+# Start server
+uvicorn src.main:app --reload
+```
+
+Backend runs at `http://localhost:8000`
+API docs at `http://localhost:8000/docs`
+
+### Frontend Setup
+
+```bash
+cd apps/web
+
+# Install dependencies
+npm install
+
+# Set environment variables
+echo "NEXT_PUBLIC_API_URL=http://localhost:8000/api/v1" > .env.local
+
+# Start development server
+npm run dev
+```
+
+Frontend runs at `http://localhost:3000`
+
+---
 
 ## Disclaimer
 
